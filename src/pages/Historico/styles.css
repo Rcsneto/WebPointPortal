@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.relogio-container{
+    flex-direction:column;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.relogio-container button{
+    flex-direction:column;
+    display: flex;
+    width: 550px;
+    margin-top: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.usuario-container button:hov{
+    opacity: 0.8;
+}
+
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+}
+
+.relogio div {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(5, 5, 5, .9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+
+.relogio span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.relogio span.tempo {
+    font-size: 10px;
+}
+
+.usuario-container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 25px;
+    margin: 20px auto;
+}
+
+.usuario-container header{
+    display: flex;
+    align-items: center;
+}
+
+.usuario-container header span{
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.usuario-container header span strong{
+    color: #333333;
+}
+
+.usuario-container  header a{
+    width: 250px;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.usuario-container header button{
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #DCDCE6;
+    background: transparent;
+    margin-left: auto;
+    transition: border-color 0.5s;
+}
+
+.usuario-container header button:hover{
+    opacity: 0.8;
+}
+
+.usuario-container h1{
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+.usuario-container ul {
+    display: grid;
+    padding: 0 25px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 35px ;
+    list-style: none;
+}
+
+.usuario-container ul li {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.usuario-container ul li button{
+    position: flex;
+    right: 25px;
+    top: 25px;
+    border: 0;
+    background: transparent;
+}
+
+.usuario-container ul li button + button{
+    top: 50px;
+}
+
+.usuario-container ul li button:hover{
+    opacity: 0.8;
+}
+
+.usuario-container ul li strong{
+    display: block;
+    margin-bottom: 16px;
+    color: #41414d;
+}
+
+.usuario-container ul li p + strong{
+    margin-top: 32px;
+}
+
+.usuario-container ul li p {
+    color: #737380;
+    line-height: 21px;
+    font-size: 16px;
+}

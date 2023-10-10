@@ -21,7 +21,7 @@ export default function Login (){
         localStorage.setItem('email',email);
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('expiration', response.data.expiration);
-        navigate('/usuarios');
+        navigate('/historico');
 
         }catch(error){
             alert('erro ao realizar login' + error)
@@ -43,8 +43,8 @@ export default function Login (){
                         onChange={e=>setPassword(e.target.value)}
                     />
                     <button class="button" type="submit">Login</button>
-
                 </form>
+                <button className="button">Esqueceu a senha?</button>
             </section>
         </div>
     )
