@@ -59,3 +59,7 @@
 .novo-usuario-container .content form input {
     margin-top: 8px;
 }
+
+.novo-usuario-container .button{
+    width: 200px;
+}

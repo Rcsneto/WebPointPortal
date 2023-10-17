@@ -8,7 +8,6 @@ import {FiXCircle, FiEdit, FiUserX} from 'react-icons/fi'
 
 export default function Usuarios(){
 
-    const[nome,setNome] = useState('');
     const[usuarios,setusuarios] = useState([]);
 
     const navigate = useNavigate();

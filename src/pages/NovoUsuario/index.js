@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './styles.css';
-import { FiCornerDownLeft, FiUser, FiUserPlus } from "react-icons/fi";
-import { Link, useNavigate,useParams } from "react-router-dom";
+import { FiCornerDownLeft, FiUserPlus } from "react-icons/fi";
+import { Link, useNavigate} from "react-router-dom";
 import api from "../../services/api";
 
 export default function NovoUsuario(){
@@ -9,16 +9,9 @@ export default function NovoUsuario(){
     const [Email,setEmail] = useState('')
     const [Password,setSenha] = useState('');
     const [ConfirmPassword,setConfirmaSenha] = useState('');
-
-    const navigate = useNavigate();
-
     const token = localStorage.getItem('token');
 
-    const authorization = {
-        headers : {
-            authorization : `Bearer ${token}`
-        }
-    }
+    const navigate = useNavigate();
 
     async function saveUser(event){
         event.preventDefault();
@@ -31,12 +24,13 @@ export default function NovoUsuario(){
         try{
             debugger;
             await api.post("/api/account/createUser",data); 
-
+            alert('Usuário criado com sucesso!!')
+            navigate('/historico');
         }catch(error){
-            alert('Erro ao gravar usuário ' + error); 
+            alert('Erro ao gravar usuário, A senha deve conter: letra maiúscula,letra minúscula,as duas senhas devem ser iguais,carater especial e mais de 6 digitos'); 
         }
     }
-
+if(token !== ''){
     return(
         <div className="novo-usuario-container">
             <div className="content">
@@ -63,4 +57,7 @@ export default function NovoUsuario(){
             </div>
         </div>
     );
+}else{
+    navigate('/');
+}
 }

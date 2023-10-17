@@ -5,6 +5,7 @@ import Usuarios from "./pages/Usuario";
 import NovoUsuario from "./pages/NovoUsuario";
 import Historico from "./pages/Historico"
 import Tabela from "./pages/Tabela"
+import AlterarSenha from "./pages/AlterarSenha"
 
 export default function Rotas (){
     return(
@@ -15,6 +16,7 @@ export default function Rotas (){
                     <Route path="/novo/:usuarioId" Component={NovoUsuario}/>
                     <Route path="/historico" Component={Historico}/>
                     <Route path="/tabela" Component={Tabela}/>
+                    <Route path="/alterarSenha" Component={AlterarSenha}/>
                 </Routes>
         </BrowserRouter> 
     );

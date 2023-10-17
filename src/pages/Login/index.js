@@ -44,7 +44,6 @@ export default function Login (){
                     />
                     <button class="button" type="submit">Login</button>
                 </form>
-                <button className="button">Esqueceu a senha?</button>
             </section>
         </div>
     )
